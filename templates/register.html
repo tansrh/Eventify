@@ -1,0 +1,87 @@
+{%extends "base.html"%}
+{%block content%}
+    
+    <style>
+       
+
+        .register-container {
+            background-color: #2a2a2a; /* Slightly lighter matte black for the container */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 80%;
+            margin: 10px auto ;
+            color: #fff;
+        }
+
+        .register-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .register-container input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #3a3a3a; /* Input fields in dark gray */
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .register-container input:focus {
+            outline: none;
+            border: 2px solid #007bff; /* Blue border on focus */
+        }
+
+        .register-container button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff; /* Blue button */
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-container button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .register-container .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register-container .login-link a {
+            color: #007bff; /* Blue link for login */
+            text-decoration: none;
+        }
+
+        .register-container .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+
+    <div class="register-container">
+        <h2>Register</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit" style="margin: auto;">Register</button>
+            <div class="login-link">
+                <p>Already have an account? <a href="/login">Login</a></p>
+            </div>
+        </form>
+    </div>
+
+    {% endblock%}

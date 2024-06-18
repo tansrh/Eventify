@@ -1,0 +1,78 @@
+{%extends "base.html"%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Card</title>
+    <style>
+        
+        .event-card {
+            background-color: #fff;
+           
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: scroll;
+            width: 80%;
+            height: 50vh;
+            margin: 10px auto;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.2s;
+        }
+        .event-card:hover {
+            transform: scale(1.05);
+        }
+        .event-card .card-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .event-card .card-body {
+            padding: 20px;
+            color: #333;
+        }
+        .event-card .card-body p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .event-card .card-body .event-date-time {
+            color: #0e0d0d;
+            font-size: 12px;
+        }
+        .event-card .card-body .event-location,
+        .event-card .card-body .event-capacity {
+            font-size: 14px;
+            color: #007bff;
+            margin-top: 10px;
+        }
+        .event-card .card-footer {
+            background-color: #f2f2f2;
+            padding: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="event-card">
+        <div class="card-header">
+            {{obj.name}}
+        </div>
+        
+            
+        
+        <div class="card-body">
+           
+            <p> <b style="color: #0066cc;">Date: {{obj.date}}  Time: {{obj.time}} <br><br>{{obj.location}}, Capacity: {{obj.capacity}}</b><br><br>{{obj.description}}  </p>
+            
+            
+        </div>
+        
+    </div>
+</body>
+</html>
+{%endblock%}

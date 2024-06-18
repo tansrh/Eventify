@@ -1,0 +1,123 @@
+{%extends "base.html"%}
+{%block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Event</title>
+    <style>
+      
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin: 10px auto;
+            
+            box-sizing: border-box;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #333;
+            outline: none;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #007bff;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-group .form-date-time {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .form-group .form-date-time input {
+            flex: 1;
+        }
+        .form-group button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Add New Event</h2>
+        <form id="addEventForm" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="eventName">Event Name</label>
+                <input type="text" id="eventName" name="eventName" maxlength="200" required>
+            </div>
+            <div class="form-group">
+                <label for="eventDescription">Description</label>
+                <textarea id="eventDescription" name="eventDescription" required></textarea>
+            </div>
+            <div class="form-group form-date-time">
+                <div>
+                    <label for="eventDate">Date</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+                </div>
+                <div>
+                    <label for="eventTime">Time</label>
+                    <input type="time" id="eventTime" name="eventTime" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="eventLocation">Location</label>
+                <input type="text" id="eventLocation" name="eventLocation" maxlength="200" required>
+            </div>
+            <div class="form-group">
+                <label for="eventCapacity">Capacity</label>
+                <input type="number" id="eventCapacity" name="eventCapacity" required min="1">
+            </div>
+            <div class="form-group">
+                <button type="submit">Add Event</button>
+            </div>
+        </form>
+    </div>
+
+ 
+
+</body>
+</html>
+
+
+
+{%endblock%}

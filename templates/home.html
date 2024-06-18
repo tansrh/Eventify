@@ -1,0 +1,130 @@
+{%extends "base.html"%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .intro {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #444;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+        .intro h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .intro p {
+            font-size: 1.2em;
+            color: #ddd;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .feature {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #555;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .feature:hover {
+            transform: scale(1.05);
+        }
+        .feature h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        .feature p {
+            font-size: 1em;
+            color: #ccc;
+        }
+        .cta {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #555;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+        .cta h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .cta p {
+            font-size: 1.2em;
+            color: #ddd;
+        }
+        .cta a {
+            display: inline-block;
+            padding: 10px 30px;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #0066cc;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .cta a:hover {
+            background-color: #004c99;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Introduction Section -->
+    <div class="intro">
+        <h1>Plausibility Solutions</h1>
+        <p>Discover innovative solutions and explore endless possibilities with us. Our team is dedicated to delivering top-notch services and creating remarkable experiences. Join us on a journey to excellence.</p>
+    </div>
+
+    <!-- Features/Services Section -->
+    <div class="features">
+        <div class="feature">
+            <h2>Innovative Solutions</h2>
+            <p>We leverage cutting-edge technology to provide innovative solutions that drive success and growth for your business.</p>
+        </div>
+        <div class="feature">
+            <h2>Expert Team</h2>
+            <p>Our team of experts brings a wealth of knowledge and experience to every project, ensuring exceptional results every time.</p>
+        </div>
+        <div class="feature">
+            <h2>Custom Development</h2>
+            <p>We offer custom development services tailored to meet your unique needs, from web and mobile apps to complex system integrations.</p>
+        </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="cta">
+        <h2>Ready to Get Started?</h2>
+        <p>Contact us today to discuss your project and find out how we can help you achieve your goals. We look forward to working with you!</p>
+        <a href="contact.html">Contact Us</a>
+    </div>
+</div>
+
+</body>
+</html>
+{% endblock%}

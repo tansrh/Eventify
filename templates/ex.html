@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="display: flex; flex-wrap: wrap; justify-content: center; margin: auto; padding: 20px;">
+    {% for n in data %}
+        <style>
+            body {
+                background-color: #1c1c1c;
+                color: #ffffff;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .event-card {
+                background-color: #292929;
+                border: 1px solid #444;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+                width: 300px;
+                margin: 20px;
+                text-align: center;
+                transition: transform 0.2s;
+                color: #ffffff;
+            }
+            .event-card:hover {
+                transform: scale(1.05);
+            }
+            .event-card .card-header {
+                background-color: #1a1919;
+                color: #ffffff;
+                padding: 15px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+            .event-card .card-body {
+                padding: 20px;
+                color: #cccccc;
+            }
+            .event-card .card-body p {
+                margin: 10px 0;
+                font-size: 14px;
+            }
+            .event-card .card-body .event-date-time {
+                color: #888888;
+                font-size: 12px;
+            }
+            .event-card .card-body .event-location,
+            .event-card .card-body .event-capacity {
+                font-size: 14px;
+                color: #007bff;
+                margin-top: 10px;
+            }
+            .event-card .card-footer {
+                background-color: #333;
+                padding: 10px;
+                font-size: 12px;
+                color: #cccccc;
+            }
+            .event-card .register-button {
+                background-color: #007bff;
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-top: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .event-card .register-button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+        
+        <div class="event-card" style="display: flex; flex-wrap: wrap; flex-direction:column; justify-content:  space-between;">
+            <a href="{{ n.id }}" style="cursor: pointer; text-decoration: none; color: inherit;">
+                <div class="card-header">
+                    {{ n.name }}
+                </div>
+                <div class="card-body">
+                    <b><p>{{ n.description|slice:"0:100" }}...</p></b>
+                    <div class="event-date-time">
+                        <p>Date: {{ n.date }}</p>
+                        <p>Time: {{ n.time }}</p>
+                    </div>
+                    <div class="event-location">
+                        Location: {{ n.location }}
+                    </div>
+                    <div class="event-capacity">
+                        Capacity: {{ n.capacity }}
+                    </div>
+                </div>
+            </a>
+            <div class="card-footer">
+                <a href="" class="register-button">Register</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

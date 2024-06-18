@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matte Black Footer</title>
+    <style>
+        body {
+            margin: 0;
+           
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            
+        }
+        footer {
+            background-color: #1a1a1a; /* Matte black */
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
+        }
+        .footer-content {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+        .footer-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+            transition: color 0.3s ease;
+        }
+        .footer-section a:hover {
+            color: #bbb;
+        }
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #444;
+            transition: background-color 0.3s ease;
+        }
+        .social-icons a:hover {
+            background-color: #555;
+        }
+        .social-icons img {
+            width: 20px;
+            height: 20px;
+            filter: invert(1); /* Make icon white */
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>We are a leading company in our industry with a passion for creating innovative solutions.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Events</a>
+            
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: contact@yourcompany.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 Your Street, City, Country</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 Your Company. All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>
