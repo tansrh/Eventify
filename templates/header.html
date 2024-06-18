@@ -80,9 +80,9 @@
 <body>
 
 <header>
-    <a href="/" class="logo">PS</a>
+   
     {% if request.user.is_authenticated %}
-    <b><a href="/">{{request.user.username}}</a></b>
+    <b><a href="/" class="logo">{{request.user.username}}</a></b>
     {% endif %}
     <nav>
         <a href="/">Home</a>
